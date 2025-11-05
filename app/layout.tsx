@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import AppThemeProvider from "../context/ThemeProvider";
+import Navbar from "@/components/navigation/navbar";
 
 const inter = localFont({
   src: "./fonts/InterVF.ttf",
@@ -33,6 +34,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} ${spaceGrotesk.variable} antialiased`}>
         <AppThemeProvider attribute="class" defaultTheme="system" enableSystem={true} disableTransitionOnChange={true}>
+          <Navbar />
           {children}
         </AppThemeProvider>
       </body>
