@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import ThemeToggler from "./ThemeToggler";
 
 const Navbar = () => {
   return (
@@ -14,7 +15,9 @@ const Navbar = () => {
 
       <p>Global Search</p>
 
-      <div className="flex-iCenter-jBetween">Theme</div>
+      <div className="flex-iCenter-jBetween">
+        <ThemeToggler />
+      </div>
     </nav>
   );
 };
